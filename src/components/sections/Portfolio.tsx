@@ -47,7 +47,7 @@ const projects = [
         title: "Administrative Capital - Mansoura 7",
         titleAr: "العاصمة الإدارية - المنصورة 7",
         category: "Structural",
-        image: "/images/projects/project7.jpg",
+        image: "/images/projects/project7.JPG",
     },
     {
         title: "Administrative Capital - Mansoura 10",
