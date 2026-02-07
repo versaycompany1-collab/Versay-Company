@@ -39,7 +39,10 @@ export function Footer() {
     };
 
     return (
-        <footer className="relative bg-gray-950 pt-16">
+        <footer className="relative bg-deep-navy pt-16">
+            {/* Gold accent line at top */}
+            <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-gold to-transparent" />
+
             {/* Main Footer */}
             <div className="mx-auto max-w-7xl px-4 lg:px-8">
                 <div className="grid gap-12 pb-12 md:grid-cols-2 lg:grid-cols-4">
@@ -55,7 +58,7 @@ export function Footer() {
                             />
                             <div>
                                 <h3 className="text-lg font-bold text-white">Versay</h3>
-                                <p className="text-xs text-gray-500">شركة فرساي</p>
+                                <p className="text-xs text-gold">شركة فرساي</p>
                             </div>
                         </div>
                         <p className="mb-6 text-sm text-gray-400">
@@ -70,7 +73,7 @@ export function Footer() {
                                 <a
                                     key={social.label}
                                     href={social.href}
-                                    className="flex h-10 w-10 items-center justify-center rounded-lg bg-gray-800 text-gray-400 transition-all hover:bg-copper hover:text-white"
+                                    className="flex h-10 w-10 items-center justify-center rounded-lg bg-midnight-blue border border-gold/10 text-gray-400 transition-all hover:bg-gold hover:text-deep-navy hover:border-gold"
                                     aria-label={social.label}
                                 >
                                     <social.icon className="h-5 w-5" />
@@ -87,7 +90,7 @@ export function Footer() {
                                 <li key={link.label}>
                                     <button
                                         onClick={() => scrollToSection(link.href)}
-                                        className="text-sm text-gray-400 transition-colors hover:text-copper"
+                                        className="text-sm text-gray-400 transition-colors hover:text-gold"
                                     >
                                         {link.label}
                                     </button>
@@ -104,7 +107,7 @@ export function Footer() {
                                 <li key={link.label}>
                                     <button
                                         onClick={() => scrollToSection(link.href)}
-                                        className="text-sm text-gray-400 transition-colors hover:text-copper"
+                                        className="text-sm text-gray-400 transition-colors hover:text-gold"
                                     >
                                         {link.label}
                                     </button>
@@ -118,15 +121,15 @@ export function Footer() {
                         <h4 className="mb-4 font-semibold text-white">Contact</h4>
                         <ul className="space-y-3 text-sm text-gray-400">
                             <li>
-                                <span className="block text-xs text-gray-500">Phone:</span>
+                                <span className="block text-xs text-gold/70">Phone:</span>
                                 +20 1005004355
                             </li>
                             <li>
-                                <span className="block text-xs text-gray-500">Email:</span>
+                                <span className="block text-xs text-gold/70">Email:</span>
                                 info@versay-eg.com
                             </li>
                             <li>
-                                <span className="block text-xs text-gray-500">Location:</span>
+                                <span className="block text-xs text-gold/70">Location:</span>
                                 Kafr El Sheikh - Baltim - Industrial City
                             </li>
                         </ul>
@@ -134,7 +137,7 @@ export function Footer() {
                 </div>
 
                 {/* Divider */}
-                <div className="border-t border-gray-800" />
+                <div className="border-t border-gold/10" />
 
                 {/* Bottom Bar */}
                 <div className="flex flex-col items-center justify-between gap-4 py-6 md:flex-row">
@@ -147,7 +150,7 @@ export function Footer() {
                     <motion.button
                         onClick={scrollToTop}
                         whileHover={{ y: -3 }}
-                        className="flex items-center gap-2 text-sm text-gray-400 transition-colors hover:text-copper"
+                        className="flex items-center gap-2 text-sm text-gray-400 transition-colors hover:text-gold"
                     >
                         <ArrowUp className="h-4 w-4" />
                         Back to top

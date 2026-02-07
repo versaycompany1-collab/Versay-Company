@@ -42,8 +42,8 @@ export function Navbar() {
             initial={{ y: -100 }}
             animate={{ y: 0 }}
             className={`fixed left-0 right-0 top-0 z-50 transition-all duration-300 ${isScrolled
-                    ? "bg-white/95 shadow-lg backdrop-blur-md dark:bg-gray-900/95"
-                    : "bg-transparent"
+                ? "bg-deep-navy/95 shadow-lg shadow-black/20 backdrop-blur-md border-b border-gold/10"
+                : "bg-transparent"
                 }`}
         >
             <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 lg:px-8">
@@ -60,10 +60,10 @@ export function Navbar() {
                         className="h-12 w-12 object-contain"
                     />
                     <div className="hidden sm:block">
-                        <h1 className="text-lg font-bold text-steel-dark dark:text-white">
+                        <h1 className="text-lg font-bold text-white">
                             Versay
                         </h1>
-                        <p className="text-xs text-gray-600 dark:text-gray-400">
+                        <p className="text-xs text-gold">
                             شركة فرساي
                         </p>
                     </div>
@@ -75,7 +75,7 @@ export function Navbar() {
                         <button
                             key={link.href}
                             onClick={() => scrollToSection(link.href)}
-                            className="rounded-lg px-4 py-2 text-sm font-medium text-gray-700 transition-colors hover:bg-copper/10 hover:text-copper dark:text-gray-300 dark:hover:text-copper"
+                            className="rounded-lg px-4 py-2 text-sm font-medium text-gray-300 transition-colors hover:bg-gold/10 hover:text-gold"
                         >
                             {link.label}
                         </button>
@@ -88,7 +88,7 @@ export function Navbar() {
                         variant="ghost"
                         size="icon"
                         onClick={toggleDarkMode}
-                        className="rounded-full"
+                        className="rounded-full text-gray-300 hover:text-gold hover:bg-gold/10"
                     >
                         {isDarkMode ? (
                             <Sun className="h-5 w-5" />
@@ -98,6 +98,7 @@ export function Navbar() {
                     </Button>
 
                     <Button
+                        variant="premium"
                         onClick={() => scrollToSection("#contact")}
                         className="hidden sm:flex"
                         size="sm"
@@ -110,7 +111,7 @@ export function Navbar() {
                         variant="ghost"
                         size="icon"
                         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                        className="lg:hidden"
+                        className="lg:hidden text-gray-300 hover:text-gold hover:bg-gold/10"
                     >
                         {isMobileMenuOpen ? (
                             <X className="h-6 w-6" />
@@ -128,19 +129,20 @@ export function Navbar() {
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: "auto" }}
                         exit={{ opacity: 0, height: 0 }}
-                        className="border-t border-gray-200 bg-white dark:border-gray-700 dark:bg-gray-900 lg:hidden"
+                        className="border-t border-gold/10 bg-deep-navy/98 backdrop-blur-lg lg:hidden"
                     >
                         <div className="flex flex-col px-4 py-4">
                             {navLinks.map((link) => (
                                 <button
                                     key={link.href}
                                     onClick={() => scrollToSection(link.href)}
-                                    className="rounded-lg px-4 py-3 text-left text-base font-medium text-gray-700 transition-colors hover:bg-copper/10 hover:text-copper dark:text-gray-300"
+                                    className="rounded-lg px-4 py-3 text-left text-base font-medium text-gray-300 transition-colors hover:bg-gold/10 hover:text-gold"
                                 >
                                     {link.label} - {link.labelAr}
                                 </button>
                             ))}
                             <Button
+                                variant="premium"
                                 onClick={() => scrollToSection("#contact")}
                                 className="mt-4"
                             >

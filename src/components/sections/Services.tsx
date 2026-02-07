@@ -24,7 +24,6 @@ const services = [
         titleAr: "البوابات والأبواب",
         description:
             "Custom-designed gates and armored doors with fire resistance, combining security with elegant aesthetics.",
-        gradient: "from-amber-500 to-orange-600",
     },
     {
         icon: Fence,
@@ -33,7 +32,6 @@ const services = [
         titleAr: "الهاندريلات والدرابزينات",
         description:
             "Premium staircase handrails and balcony railings crafted with precision and artistic design.",
-        gradient: "from-blue-500 to-cyan-600",
     },
     {
         icon: Warehouse,
@@ -42,7 +40,6 @@ const services = [
         titleAr: "الهناجر والكبائن",
         description:
             "Industrial hangars, steel structures, and prefabricated cabins for commercial and industrial use.",
-        gradient: "from-slate-500 to-gray-600",
     },
     {
         icon: Sparkles,
@@ -51,7 +48,6 @@ const services = [
         titleAr: "أعمال الليزر CNC",
         description:
             "Precision laser cutting for intricate patterns, decorative panels, and custom metal designs.",
-        gradient: "from-purple-500 to-pink-600",
     },
     {
         icon: Hexagon,
@@ -60,7 +56,6 @@ const services = [
         titleAr: "أعمال الاستانلس",
         description:
             "High-quality stainless steel fabrication for modern architectural and interior applications.",
-        gradient: "from-gray-400 to-zinc-500",
     },
     {
         icon: GlassWater,
@@ -69,7 +64,6 @@ const services = [
         titleAr: "أعمال الزجاج والمعادن",
         description:
             "Seamless integration of glass with metal frames for contemporary facades and interiors.",
-        gradient: "from-teal-500 to-emerald-600",
     },
     {
         icon: Cog,
@@ -78,7 +72,6 @@ const services = [
         titleAr: "الفورفورجيه",
         description:
             "Traditional and modern forged iron designs for gates, furniture, and decorative elements.",
-        gradient: "from-rose-500 to-red-600",
     },
     {
         icon: Sun,
@@ -87,7 +80,6 @@ const services = [
         titleAr: "البرجولات والمظلات",
         description:
             "Custom pergolas and shade structures for outdoor spaces with elegant metal frameworks.",
-        gradient: "from-yellow-500 to-amber-600",
     },
 ];
 
@@ -99,11 +91,11 @@ export function Services() {
         <section
             id="services"
             ref={ref}
-            className="relative overflow-hidden bg-white py-24 dark:bg-gray-800"
+            className="relative overflow-hidden bg-white py-24 dark:bg-midnight-blue"
         >
             {/* Animated background blobs */}
-            <div className="absolute -left-40 top-0 h-[500px] w-[500px] rounded-full bg-copper/5 blur-3xl" />
-            <div className="absolute -right-40 bottom-0 h-[500px] w-[500px] rounded-full bg-steel-blue/5 blur-3xl" />
+            <div className="absolute -left-40 top-0 h-[500px] w-[500px] rounded-full bg-gold/5 blur-3xl" />
+            <div className="absolute -right-40 bottom-0 h-[500px] w-[500px] rounded-full bg-royal-blue/5 blur-3xl" />
 
             <div className="relative mx-auto max-w-7xl px-4 lg:px-8">
                 {/* Section Header */}
@@ -117,13 +109,13 @@ export function Services() {
                         initial={{ opacity: 0, scale: 0.8 }}
                         animate={isInView ? { opacity: 1, scale: 1 } : {}}
                         transition={{ duration: 0.5 }}
-                        className="mb-4 inline-block rounded-full bg-gradient-to-r from-copper/20 to-bronze/20 px-6 py-2 text-sm font-semibold text-copper"
+                        className="mb-4 inline-block rounded-full bg-gradient-to-r from-gold/10 to-warm-gold/10 border border-gold/20 px-6 py-2 text-sm font-semibold text-gold"
                     >
                         Our Services - خدماتنا
                     </motion.span>
-                    <h2 className="mb-4 text-4xl font-bold text-gray-900 dark:text-white md:text-5xl lg:text-6xl">
+                    <h2 className="mb-4 text-4xl font-bold text-charcoal dark:text-white md:text-5xl lg:text-6xl">
                         Premium{" "}
-                        <span className="bg-gradient-to-r from-copper to-bronze bg-clip-text text-transparent">
+                        <span className="bg-gradient-to-r from-gold to-warm-gold bg-clip-text text-transparent">
                             Metal Solutions
                         </span>
                     </h2>
@@ -147,24 +139,29 @@ export function Services() {
                         >
                             <Link href={`/services/${service.slug}`}>
                                 <div
-                                    className={`relative h-full overflow-hidden rounded-3xl bg-gradient-to-br ${service.gradient} transition-all duration-500 hover:shadow-2xl hover:scale-[1.02] ${index === 0 || index === 3 ? "min-h-[280px]" : "min-h-[260px]"
+                                    className={`relative h-full overflow-hidden rounded-3xl bg-gradient-to-br from-deep-navy to-midnight-blue transition-all duration-500 hover:shadow-2xl hover:shadow-gold/10 hover:scale-[1.02] border border-gold/10 hover:border-gold/30 ${index === 0 || index === 3 ? "min-h-[280px]" : "min-h-[260px]"
                                         }`}
                                 >
                                     {/* Decorative pattern */}
-                                    <div className="absolute inset-0 opacity-20">
+                                    <div className="absolute inset-0 opacity-10">
                                         <div
                                             className="absolute inset-0"
                                             style={{
-                                                backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23fff' fill-opacity='0.3' fill-rule='evenodd'%3E%3Cpath d='M20 20.5V18H0v-2h20v-2.5l5 3.5-5 3.5z'/%3E%3C/g%3E%3C/svg%3E")`,
+                                                backgroundImage: `linear-gradient(rgba(212, 175, 55, 0.2) 1px, transparent 1px),
+                                                                 linear-gradient(90deg, rgba(212, 175, 55, 0.2) 1px, transparent 1px)`,
+                                                backgroundSize: '30px 30px',
                                             }}
                                         />
                                     </div>
 
+                                    {/* Gold accent glow on hover */}
+                                    <div className="absolute -top-20 -right-20 h-40 w-40 rounded-full bg-gold/0 blur-3xl transition-all duration-500 group-hover:bg-gold/20" />
+
                                     {/* Content */}
                                     <div className="relative flex h-full flex-col justify-between p-8">
                                         {/* Icon */}
-                                        <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-white/20 backdrop-blur-sm transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
-                                            <service.icon className="h-8 w-8 text-white" />
+                                        <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gold/10 border border-gold/20 backdrop-blur-sm transition-all duration-300 group-hover:scale-110 group-hover:bg-gold/20 group-hover:border-gold/40">
+                                            <service.icon className="h-8 w-8 text-gold" />
                                         </div>
 
                                         {/* Text */}
@@ -173,17 +170,17 @@ export function Services() {
                                                 {service.title}
                                             </h3>
                                             <p
-                                                className="mb-3 text-lg font-medium text-white/90"
+                                                className="mb-3 text-lg font-medium text-gold"
                                                 style={{ fontFamily: "Cairo, sans-serif" }}
                                             >
                                                 {service.titleAr}
                                             </p>
-                                            <p className="mb-6 line-clamp-2 text-sm text-white/80">
+                                            <p className="mb-6 line-clamp-2 text-sm text-gray-400">
                                                 {service.description}
                                             </p>
 
                                             {/* Learn More */}
-                                            <div className="inline-flex items-center gap-2 rounded-full bg-white/20 px-5 py-2.5 font-semibold text-white backdrop-blur-sm transition-all duration-300 group-hover:bg-white/30 group-hover:gap-3">
+                                            <div className="inline-flex items-center gap-2 rounded-full bg-gold/10 border border-gold/20 px-5 py-2.5 font-semibold text-gold backdrop-blur-sm transition-all duration-300 group-hover:bg-gold/20 group-hover:gap-3 group-hover:border-gold/40">
                                                 <span>Learn More</span>
                                                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                                             </div>
@@ -191,7 +188,7 @@ export function Services() {
                                     </div>
 
                                     {/* Hover shine effect */}
-                                    <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
+                                    <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-gold/10 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
                                 </div>
                             </Link>
                         </motion.div>
@@ -205,13 +202,13 @@ export function Services() {
                     transition={{ duration: 0.8, delay: 0.8 }}
                     className="mt-16 text-center"
                 >
-                    <div className="inline-flex flex-col items-center rounded-3xl bg-gradient-to-r from-gray-50 to-gray-100 px-12 py-8 dark:from-gray-900 dark:to-gray-800">
+                    <div className="inline-flex flex-col items-center rounded-3xl bg-gradient-to-r from-platinum to-gray-100 px-12 py-8 dark:from-deep-navy dark:to-midnight-blue border border-gold/10">
                         <p className="mb-4 text-lg text-gray-600 dark:text-gray-400">
                             Need a custom solution? We specialize in bespoke metal fabrication.
                         </p>
                         <a
                             href="#contact"
-                            className="group inline-flex items-center gap-3 rounded-2xl bg-gradient-to-r from-copper to-bronze px-8 py-4 font-semibold text-white shadow-lg transition-all hover:scale-105 hover:shadow-xl"
+                            className="group inline-flex items-center gap-3 rounded-2xl bg-gradient-to-r from-gold to-warm-gold px-8 py-4 font-semibold text-deep-navy shadow-lg shadow-gold/20 transition-all hover:scale-105 hover:shadow-xl hover:shadow-gold/30"
                         >
                             Request Custom Quote
                             <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />

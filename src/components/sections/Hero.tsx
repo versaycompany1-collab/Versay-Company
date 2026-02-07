@@ -16,17 +16,23 @@ export function Hero() {
     return (
         <section
             id="home"
-            className="relative min-h-screen overflow-hidden bg-gradient-to-br from-gray-900 via-steel-dark to-gray-800"
+            className="relative min-h-screen overflow-hidden bg-gradient-to-br from-deep-navy via-midnight-blue to-deep-navy"
         >
-            {/* Background Pattern */}
-            <div className="absolute inset-0 opacity-10">
+            {/* Animated Grid Background */}
+            <div className="absolute inset-0 opacity-20">
                 <div
                     className="absolute inset-0"
                     style={{
-                        backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23B87333' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+                        backgroundImage: `linear-gradient(rgba(37, 99, 235, 0.1) 1px, transparent 1px),
+                                         linear-gradient(90deg, rgba(37, 99, 235, 0.1) 1px, transparent 1px)`,
+                        backgroundSize: '50px 50px',
                     }}
                 />
             </div>
+
+            {/* Gold Accent Glows */}
+            <div className="absolute -left-40 top-1/4 h-96 w-96 rounded-full bg-gold/10 blur-3xl" />
+            <div className="absolute -right-40 bottom-1/4 h-96 w-96 rounded-full bg-royal-blue/10 blur-3xl" />
 
             {/* Floating Elements */}
             <motion.div
@@ -41,7 +47,7 @@ export function Hero() {
                 }}
                 className="absolute right-10 top-32 hidden lg:block"
             >
-                <div className="h-40 w-40 rounded-3xl bg-gradient-to-br from-copper/30 to-bronze/30 backdrop-blur-sm" />
+                <div className="h-40 w-40 rounded-3xl bg-gradient-to-br from-gold/20 to-warm-gold/10 backdrop-blur-sm border border-gold/20" />
             </motion.div>
 
             <motion.div
@@ -56,8 +62,12 @@ export function Hero() {
                 }}
                 className="absolute bottom-40 left-10 hidden lg:block"
             >
-                <div className="h-32 w-32 rounded-full bg-gradient-to-br from-steel-blue/30 to-steel-dark/30 backdrop-blur-sm" />
+                <div className="h-32 w-32 rounded-full bg-gradient-to-br from-royal-blue/20 to-electric-blue/10 backdrop-blur-sm border border-royal-blue/20" />
             </motion.div>
+
+            {/* Decorative Lines */}
+            <div className="absolute left-0 top-0 h-full w-px bg-gradient-to-b from-transparent via-gold/20 to-transparent" />
+            <div className="absolute right-0 top-0 h-full w-px bg-gradient-to-b from-transparent via-gold/20 to-transparent" />
 
             {/* Main Content */}
             <div className="relative mx-auto flex min-h-screen max-w-7xl flex-col items-center justify-center px-4 py-20 text-center lg:px-8">
@@ -68,13 +78,17 @@ export function Hero() {
                     transition={{ duration: 0.8 }}
                     className="mb-8"
                 >
-                    <Image
-                        src="/images/logo.png"
-                        alt="Versay Company Logo"
-                        width={150}
-                        height={150}
-                        className="h-32 w-32 object-contain drop-shadow-2xl md:h-40 md:w-40"
-                    />
+                    <div className="relative">
+                        <div className="absolute inset-0 rounded-full bg-gold/20 blur-2xl animate-pulse" />
+                        <Image
+                            src="/images/logo.png"
+                            alt="Versay Company Logo"
+                            width={150}
+                            height={150}
+                            priority
+                            className="relative h-32 w-32 object-contain drop-shadow-2xl md:h-40 md:w-40"
+                        />
+                    </div>
                 </motion.div>
 
                 {/* Badge */}
@@ -82,7 +96,7 @@ export function Hero() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.3, duration: 0.6 }}
-                    className="mb-6 flex items-center gap-2 rounded-full bg-copper/20 px-4 py-2 text-copper"
+                    className="mb-6 flex items-center gap-2 rounded-full bg-gold/10 border border-gold/30 px-4 py-2 text-gold"
                 >
                     <Sparkles className="h-4 w-4" />
                     <span className="text-sm font-medium">ISO 9001 | 14001 | 45001 Certified</span>
@@ -98,12 +112,12 @@ export function Hero() {
                     Versay Company
                 </motion.h1>
 
-                {/* Arabic Name */}
+                {/* Arabic Name - Gold */}
                 <motion.h2
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.6, duration: 0.8 }}
-                    className="mb-6 text-2xl font-semibold text-copper md:text-3xl lg:text-4xl"
+                    className="mb-6 text-2xl font-semibold bg-gradient-to-r from-gold to-warm-gold bg-clip-text text-transparent md:text-3xl lg:text-4xl"
                     style={{ fontFamily: "Cairo, sans-serif" }}
                 >
                     شركة فرساي للتجارة والمقاولات والتشكيلات المعدنية
@@ -129,6 +143,7 @@ export function Hero() {
                     className="flex flex-col gap-4 sm:flex-row"
                 >
                     <Button
+                        variant="premium"
                         size="lg"
                         onClick={() => scrollToSection("#contact")}
                         className="group"
@@ -140,7 +155,7 @@ export function Hero() {
                         variant="outline"
                         size="lg"
                         onClick={() => scrollToSection("#services")}
-                        className="border-white/30 text-white hover:bg-white/10"
+                        className="border-white/30 text-white hover:bg-white/10 hover:text-white hover:border-gold"
                     >
                         Explore Our Services
                     </Button>
@@ -160,7 +175,7 @@ export function Hero() {
                         { value: "100%", label: "Client Satisfaction" },
                     ].map((stat, index) => (
                         <div key={index} className="text-center">
-                            <div className="text-3xl font-bold text-copper md:text-4xl">
+                            <div className="text-3xl font-bold bg-gradient-to-r from-gold to-warm-gold bg-clip-text text-transparent md:text-4xl">
                                 {stat.value}
                             </div>
                             <div className="mt-1 text-sm text-gray-400">{stat.label}</div>
@@ -181,7 +196,7 @@ export function Hero() {
                         className="cursor-pointer"
                         onClick={() => scrollToSection("#about")}
                     >
-                        <ArrowDown className="h-8 w-8 text-white/50" />
+                        <ArrowDown className="h-8 w-8 text-gold/50" />
                     </motion.div>
                 </motion.div>
             </div>

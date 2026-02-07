@@ -41,13 +41,13 @@ export function ServiceDetailPage({ service }: { service: ServiceData }) {
             <Navbar />
 
             {/* Hero Section */}
-            <section className="relative min-h-[60vh] overflow-hidden bg-gradient-to-br from-gray-900 via-steel-dark to-gray-800 pt-24">
+            <section className="relative min-h-[60vh] overflow-hidden bg-gradient-to-br from-deep-navy via-midnight-blue to-deep-navy pt-24">
                 {/* Background Pattern */}
                 <div className="absolute inset-0 opacity-10">
                     <div
                         className="absolute inset-0"
                         style={{
-                            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23B87333' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+                            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23D4AF37' fill-opacity='0.3'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
                         }}
                     />
                 </div>
@@ -61,7 +61,7 @@ export function ServiceDetailPage({ service }: { service: ServiceData }) {
                     >
                         <Link
                             href="/#services"
-                            className="inline-flex items-center gap-2 text-gray-400 transition-colors hover:text-copper"
+                            className="inline-flex items-center gap-2 text-gray-400 transition-colors hover:text-gold"
                         >
                             <ArrowLeft className="h-4 w-4" />
                             Back to Services
@@ -74,14 +74,14 @@ export function ServiceDetailPage({ service }: { service: ServiceData }) {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.2 }}
                     >
-                        <span className="mb-4 inline-block rounded-full bg-copper/20 px-4 py-2 text-sm font-medium text-copper">
+                        <span className="mb-4 inline-block rounded-full bg-gold/20 border border-gold/30 px-4 py-2 text-sm font-medium text-gold">
                             Our Services
                         </span>
                         <h1 className="mb-4 text-4xl font-bold text-white md:text-5xl lg:text-6xl">
                             {service.title}
                         </h1>
                         <p
-                            className="mb-6 text-2xl font-medium text-copper"
+                            className="mb-6 text-2xl font-medium text-gold"
                             style={{ fontFamily: "Cairo, sans-serif" }}
                         >
                             {service.titleAr}
@@ -102,14 +102,14 @@ export function ServiceDetailPage({ service }: { service: ServiceData }) {
                     >
                         <path
                             d="M0 100V0C240 66.6667 480 100 720 100C960 100 1200 66.6667 1440 0V100H0Z"
-                            className="fill-gray-50 dark:fill-gray-900"
+                            className="fill-platinum dark:fill-deep-navy"
                         />
                     </svg>
                 </div>
             </section>
 
             {/* Gallery Section */}
-            <section className="bg-gray-50 py-16 dark:bg-gray-900">
+            <section className="bg-platinum py-16 dark:bg-deep-navy">
                 <div className="mx-auto max-w-7xl px-4 lg:px-8">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
@@ -140,7 +140,7 @@ export function ServiceDetailPage({ service }: { service: ServiceData }) {
                                     whileHover={{ scale: 1.05 }}
                                     whileTap={{ scale: 0.95 }}
                                     className={`relative aspect-square overflow-hidden rounded-2xl transition-all ${selectedImage === index
-                                        ? "ring-4 ring-copper ring-offset-2"
+                                        ? "ring-4 ring-gold ring-offset-2 ring-offset-platinum dark:ring-offset-deep-navy"
                                         : "opacity-70 hover:opacity-100"
                                         }`}
                                 >
@@ -158,7 +158,7 @@ export function ServiceDetailPage({ service }: { service: ServiceData }) {
             </section>
 
             {/* Content Section */}
-            <section className="bg-white py-20 dark:bg-gray-800">
+            <section className="bg-white py-20 dark:bg-midnight-blue">
                 <div className="mx-auto max-w-7xl px-4 lg:px-8">
                     <div className="grid gap-12 lg:grid-cols-3">
                         {/* Description */}
@@ -181,7 +181,7 @@ export function ServiceDetailPage({ service }: { service: ServiceData }) {
                                                         key={j}
                                                         className="flex items-start gap-3 text-base leading-relaxed"
                                                     >
-                                                        <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-copper" />
+                                                        <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-gold" />
                                                         <span>{renderText(line.replace("• ", ""))}</span>
                                                     </li>
                                                 ))}
@@ -204,15 +204,15 @@ export function ServiceDetailPage({ service }: { service: ServiceData }) {
                             className="space-y-8"
                         >
                             {/* Features Card */}
-                            <div className="rounded-3xl bg-gradient-to-br from-gray-50 to-gray-100 p-8 dark:from-gray-900 dark:to-gray-800">
+                            <div className="rounded-3xl bg-gradient-to-br from-platinum to-gray-100 p-8 dark:from-deep-navy dark:to-midnight-blue border border-gold/10">
                                 <h3 className="mb-6 text-xl font-bold text-gray-900 dark:text-white">
                                     Key Features
                                 </h3>
                                 <ul className="space-y-4">
                                     {service.features.map((feature, index) => (
                                         <li key={index} className="flex items-start gap-3">
-                                            <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-copper/20">
-                                                <Check className="h-4 w-4 text-copper" />
+                                            <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gold/20">
+                                                <Check className="h-4 w-4 text-gold" />
                                             </div>
                                             <span className="text-gray-700 dark:text-gray-300">
                                                 {feature}
@@ -223,18 +223,18 @@ export function ServiceDetailPage({ service }: { service: ServiceData }) {
                             </div>
 
                             {/* CTA Card */}
-                            <div className="rounded-3xl bg-gradient-to-br from-copper to-bronze p-8 text-white">
+                            <div className="rounded-3xl bg-gradient-to-br from-gold to-warm-gold p-8 text-deep-navy">
                                 <h3 className="mb-4 text-xl font-bold">
                                     Ready to Get Started?
                                 </h3>
-                                <p className="mb-6 text-white/80">
+                                <p className="mb-6 text-deep-navy/80">
                                     Contact us today for a free consultation and quote.
                                 </p>
                                 <div className="space-y-3">
                                     <Link href="/#contact">
                                         <Button
                                             variant="secondary"
-                                            className="w-full bg-white text-copper hover:bg-gray-100"
+                                            className="w-full bg-deep-navy text-gold hover:bg-midnight-blue"
                                         >
                                             <Phone className="h-4 w-4" />
                                             Request Quote
@@ -247,7 +247,7 @@ export function ServiceDetailPage({ service }: { service: ServiceData }) {
                                     >
                                         <Button
                                             variant="outline"
-                                            className="w-full border-white/30 text-white hover:bg-white/10"
+                                            className="w-full border-deep-navy/30 text-deep-navy hover:bg-deep-navy/10"
                                         >
                                             WhatsApp Us
                                         </Button>
@@ -260,7 +260,7 @@ export function ServiceDetailPage({ service }: { service: ServiceData }) {
             </section>
 
             {/* Related Services */}
-            <section className="bg-gray-50 py-16 dark:bg-gray-900">
+            <section className="bg-platinum py-16 dark:bg-deep-navy">
                 <div className="mx-auto max-w-7xl px-4 lg:px-8">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -273,7 +273,7 @@ export function ServiceDetailPage({ service }: { service: ServiceData }) {
                         </h2>
                         <Link
                             href="/#services"
-                            className="inline-flex items-center gap-2 text-lg font-medium text-copper transition-colors hover:text-bronze"
+                            className="inline-flex items-center gap-2 text-lg font-medium text-gold transition-colors hover:text-warm-gold"
                         >
                             View All Services
                             <ArrowRight className="h-5 w-5" />

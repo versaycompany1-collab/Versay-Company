@@ -1,0 +1,30 @@
+{
+    "name": "Versay Company",
+    "short_name": "Versay",
+    "description": "Excellence in metal formations, trading, and contracting. Premium quality steel structures, gates, handrails, and architectural metalwork.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#0A1628",
+    "theme_color": "#D4AF37",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "/images/logo.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/images/logo.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ],
+    "categories": [
+        "business",
+        "industrial"
+    ],
+    "lang": "en",
+    "dir": "ltr"
+}

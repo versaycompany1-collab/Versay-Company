@@ -65,17 +65,23 @@ export function Contact() {
         <section
             id="contact"
             ref={ref}
-            className="relative overflow-hidden bg-gradient-to-br from-gray-900 via-steel-dark to-gray-800 py-24"
+            className="relative overflow-hidden bg-gradient-to-br from-deep-navy via-midnight-blue to-deep-navy py-24"
         >
             {/* Background Pattern */}
             <div className="absolute inset-0 opacity-5">
                 <div
                     className="absolute inset-0"
                     style={{
-                        backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23fff' fill-opacity='1' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E")`,
+                        backgroundImage: `linear-gradient(rgba(212, 175, 55, 0.3) 1px, transparent 1px),
+                                         linear-gradient(90deg, rgba(212, 175, 55, 0.3) 1px, transparent 1px)`,
+                        backgroundSize: '40px 40px',
                     }}
                 />
             </div>
+
+            {/* Gold accent glow */}
+            <div className="absolute -left-40 top-1/2 h-96 w-96 rounded-full bg-gold/5 blur-3xl" />
+            <div className="absolute -right-40 bottom-1/4 h-96 w-96 rounded-full bg-royal-blue/5 blur-3xl" />
 
             <div className="relative mx-auto max-w-7xl px-4 lg:px-8">
                 {/* Section Header */}
@@ -85,7 +91,7 @@ export function Contact() {
                     transition={{ duration: 0.8 }}
                     className="mb-16 text-center"
                 >
-                    <span className="mb-4 inline-block rounded-full bg-copper/20 px-4 py-2 text-sm font-medium text-copper">
+                    <span className="mb-4 inline-block rounded-full bg-gold/10 border border-gold/30 px-4 py-2 text-sm font-medium text-gold">
                         Contact Us - تواصل معنا
                     </span>
                     <h2 className="mb-4 text-3xl font-bold text-white md:text-4xl lg:text-5xl">
@@ -104,7 +110,7 @@ export function Contact() {
                         animate={isInView ? { opacity: 1, x: 0 } : {}}
                         transition={{ duration: 0.8, delay: 0.2 }}
                     >
-                        <div className="rounded-3xl bg-white/5 p-8 backdrop-blur-sm">
+                        <div className="rounded-3xl bg-white/5 border border-gold/10 p-8 backdrop-blur-sm">
                             <h3 className="mb-6 text-2xl font-bold text-white">
                                 Send Us a Message
                             </h3>
@@ -115,7 +121,7 @@ export function Contact() {
                                     animate={{ opacity: 1, scale: 1 }}
                                     className="flex flex-col items-center justify-center py-12 text-center"
                                 >
-                                    <CheckCircle className="mb-4 h-16 w-16 text-green-500" />
+                                    <CheckCircle className="mb-4 h-16 w-16 text-gold" />
                                     <h4 className="mb-2 text-xl font-bold text-white">
                                         Message Sent!
                                     </h4>
@@ -137,7 +143,7 @@ export function Contact() {
                                                     setFormData({ ...formData, name: e.target.value })
                                                 }
                                                 required
-                                                className="border-gray-600 bg-gray-800/50 text-white placeholder:text-gray-500"
+                                                className="border-gold/20 bg-deep-navy/50 text-white placeholder:text-gray-500 focus:border-gold focus:ring-gold/20"
                                             />
                                         </div>
                                         <div>
@@ -152,7 +158,7 @@ export function Contact() {
                                                     setFormData({ ...formData, email: e.target.value })
                                                 }
                                                 required
-                                                className="border-gray-600 bg-gray-800/50 text-white placeholder:text-gray-500"
+                                                className="border-gold/20 bg-deep-navy/50 text-white placeholder:text-gray-500 focus:border-gold focus:ring-gold/20"
                                             />
                                         </div>
                                     </div>
@@ -167,7 +173,7 @@ export function Contact() {
                                             onChange={(e) =>
                                                 setFormData({ ...formData, phone: e.target.value })
                                             }
-                                            className="border-gray-600 bg-gray-800/50 text-white placeholder:text-gray-500"
+                                            className="border-gold/20 bg-deep-navy/50 text-white placeholder:text-gray-500 focus:border-gold focus:ring-gold/20"
                                         />
                                     </div>
 
@@ -183,11 +189,11 @@ export function Contact() {
                                             }
                                             required
                                             rows={4}
-                                            className="border-gray-600 bg-gray-800/50 text-white placeholder:text-gray-500"
+                                            className="border-gold/20 bg-deep-navy/50 text-white placeholder:text-gray-500 focus:border-gold focus:ring-gold/20"
                                         />
                                     </div>
 
-                                    <Button type="submit" size="lg" className="w-full">
+                                    <Button type="submit" variant="premium" size="lg" className="w-full">
                                         <Send className="h-5 w-5" />
                                         Send Message
                                     </Button>
@@ -211,14 +217,14 @@ export function Contact() {
                                     href={info.link}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="group flex items-start gap-4 rounded-2xl bg-white/5 p-5 backdrop-blur-sm transition-all hover:bg-white/10"
+                                    className="group flex items-start gap-4 rounded-2xl bg-white/5 border border-gold/10 p-5 backdrop-blur-sm transition-all hover:bg-white/10 hover:border-gold/30"
                                 >
-                                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-copper/20">
-                                        <info.icon className="h-6 w-6 text-copper" />
+                                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gold/10 border border-gold/20">
+                                        <info.icon className="h-6 w-6 text-gold" />
                                     </div>
                                     <div>
                                         <p className="text-sm text-gray-400">{info.title}</p>
-                                        <p className="font-medium text-white group-hover:text-copper">
+                                        <p className="font-medium text-white group-hover:text-gold">
                                             {info.value}
                                         </p>
                                     </div>
@@ -227,9 +233,9 @@ export function Contact() {
                         </div>
 
                         {/* Working Hours */}
-                        <div className="rounded-2xl bg-white/5 p-6 backdrop-blur-sm">
+                        <div className="rounded-2xl bg-white/5 border border-gold/10 p-6 backdrop-blur-sm">
                             <div className="mb-4 flex items-center gap-3">
-                                <Clock className="h-6 w-6 text-copper" />
+                                <Clock className="h-6 w-6 text-gold" />
                                 <h4 className="text-lg font-semibold text-white">
                                     Working Hours
                                 </h4>
@@ -247,8 +253,8 @@ export function Contact() {
                         </div>
 
                         {/* Map Placeholder */}
-                        <div className="overflow-hidden rounded-2xl">
-                            <div className="aspect-video bg-gray-700">
+                        <div className="overflow-hidden rounded-2xl border border-gold/10">
+                            <div className="aspect-video bg-midnight-blue">
                                 <iframe
                                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55091.64935274121!2d31.108264849999997!3d31.5663889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f9f5e5e5e5e5e5%3A0x5e5e5e5e5e5e5e5e!2sBaltim%2C%20Kafr%20El%20Sheikh%20Governorate!5e0!3m2!1sen!2seg!4v1234567890"
                                     width="100%"
@@ -257,6 +263,8 @@ export function Contact() {
                                     allowFullScreen
                                     loading="lazy"
                                     referrerPolicy="no-referrer-when-downgrade"
+                                    sandbox="allow-scripts allow-same-origin"
+                                    title="Versay Company Location Map"
                                     className="grayscale"
                                 />
                             </div>

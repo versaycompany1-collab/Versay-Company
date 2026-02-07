@@ -30,7 +30,7 @@ export function Partners() {
         <section
             id="partners"
             ref={ref}
-            className="relative overflow-hidden bg-white py-20 dark:bg-gray-800"
+            className="relative overflow-hidden bg-white py-20 dark:bg-midnight-blue"
         >
             <div className="mx-auto max-w-7xl px-4 lg:px-8">
                 {/* Section Header */}
@@ -40,10 +40,10 @@ export function Partners() {
                     transition={{ duration: 0.8 }}
                     className="mb-12 text-center"
                 >
-                    <span className="mb-4 inline-block rounded-full bg-copper/10 px-4 py-2 text-sm font-medium text-copper">
+                    <span className="mb-4 inline-block rounded-full bg-gold/10 border border-gold/20 px-4 py-2 text-sm font-medium text-gold">
                         Success Partners - شركاء النجاح
                     </span>
-                    <h2 className="mb-4 text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
+                    <h2 className="mb-4 text-3xl font-bold text-charcoal dark:text-white md:text-4xl">
                         Trusted By Leading Companies
                     </h2>
                     <p className="mx-auto max-w-2xl text-gray-600 dark:text-gray-400">
@@ -61,8 +61,8 @@ export function Partners() {
                 className="relative"
             >
                 {/* Gradient Overlays for smooth fade effect */}
-                <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-32 bg-gradient-to-r from-white to-transparent dark:from-gray-800" />
-                <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-32 bg-gradient-to-l from-white to-transparent dark:from-gray-800" />
+                <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-32 bg-gradient-to-r from-white to-transparent dark:from-midnight-blue" />
+                <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-32 bg-gradient-to-l from-white to-transparent dark:from-midnight-blue" />
 
                 {/* Scrolling Container */}
                 <div className="flex overflow-hidden">
@@ -82,12 +82,13 @@ export function Partners() {
                         {duplicatedPartners.map((partner, index) => (
                             <div
                                 key={`${partner.name}-${index}`}
-                                className="group relative flex h-24 w-48 flex-shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-gray-200 bg-gray-50 transition-all hover:border-copper/50 hover:bg-white hover:shadow-lg dark:border-gray-700 dark:bg-gray-900 dark:hover:bg-gray-800"
+                                className="group relative flex h-24 w-48 flex-shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-gray-200 bg-gray-50 transition-all hover:border-gold/50 hover:bg-white hover:shadow-lg hover:shadow-gold/10 dark:border-gold/10 dark:bg-deep-navy dark:hover:border-gold/30 dark:hover:bg-midnight-blue"
                             >
                                 <Image
                                     src={partner.logo}
                                     alt={partner.name}
                                     fill
+                                    sizes="192px"
                                     className="object-cover grayscale transition-all group-hover:grayscale-0"
                                 />
                             </div>
@@ -105,15 +106,15 @@ export function Partners() {
                     className="mt-12 flex flex-wrap items-center justify-center gap-8 text-center text-sm text-gray-600 dark:text-gray-400"
                 >
                     <div className="flex items-center gap-2">
-                        <div className="h-2 w-2 rounded-full bg-green-500" />
+                        <div className="h-2 w-2 rounded-full bg-gold" />
                         <span>200+ Satisfied Clients</span>
                     </div>
                     <div className="flex items-center gap-2">
-                        <div className="h-2 w-2 rounded-full bg-green-500" />
+                        <div className="h-2 w-2 rounded-full bg-gold" />
                         <span>15+ Years of Partnership</span>
                     </div>
                     <div className="flex items-center gap-2">
-                        <div className="h-2 w-2 rounded-full bg-green-500" />
+                        <div className="h-2 w-2 rounded-full bg-gold" />
                         <span>100% Project Delivery</span>
                     </div>
                 </motion.div>
