@@ -241,7 +241,7 @@ export function ServiceDetailPage({ service }: { service: ServiceData }) {
                                         </Button>
                                     </Link>
                                     <a
-                                        href="https://wa.me/201005004355"
+                                        href="https://wa.me/201055032458"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >
