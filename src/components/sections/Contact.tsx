@@ -19,14 +19,14 @@ const contactInfo = [
     {
         icon: Phone,
         title: "Phone",
-        value: "01055032458",
-        link: "tel:01055032458",
+        value: "010 60702038",
+        link: "tel:2010 60702038",
     },
     {
         icon: MessageCircle,
         title: "WhatsApp",
-        value: "01055032458",
-        link: "https://wa.me/201055032458",
+        value: "2010 60702038",
+        link: "https://wa.me/2010 60702038",
     },
     {
         icon: Mail,
